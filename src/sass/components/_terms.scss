@@ -28,3 +28,24 @@
   color: var(--gray-2);
   max-width: 288px;
 }
+
+@media (max-width: 768px) {
+  .terms-wrapper {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .terms__item__desription {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+@media (max-width: 390px) {
+  .terms__item__title {
+    margin-top: 10px;
+  }
+}
