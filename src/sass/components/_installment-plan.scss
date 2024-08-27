@@ -3,7 +3,7 @@
 }
 
 .installment-plan__substrate {
-  padding: 102px 0;
+  padding: 102px 32px;
 }
 
 .installment-plan__wrapper {
@@ -46,4 +46,27 @@
 
 .installment-plan__submit {
   margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .installment-plan__substrate {
+    padding: 72px 32px;
+  }
+
+  .installment-plan__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .installment-plan__description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .installment-plan__substrate {
+    padding: 48px 20px;
+  }
 }
