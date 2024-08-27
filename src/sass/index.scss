@@ -3,7 +3,15 @@
 @import "./service/variables";
 @import "./service/fonts";
 
+// ui
+@import "./ui/substrate";
+@import "./ui/select";
+@import "./ui/button";
+
 // components
 @import "./components/body";
 @import "./components/container";
 @import "./components/header";
+@import "./components/page-info";
+@import "./components/installment-plan";
+@import "./components/switcher";

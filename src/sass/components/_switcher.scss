@@ -1,0 +1,56 @@
+.switcher {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  & button {
+    position: relative;
+    border-radius: 6px;
+    width: auto;
+    height: 92px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: var(--gray-3);
+
+    &:hover:not(.active) {
+      // background-color: var(--grey-hover);
+    }
+
+    & * {
+      pointer-events: none;
+    }
+  }
+
+  & .active {
+    & .switcher-img {
+      stroke: var(--green);
+    }
+
+    color: var(--green);
+  }
+}
+
+.switcher-indicator-row {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--light);
+}
+
+.switcher-indicator {
+  position: absolute;
+  height: 1px;
+  background-color: var(--gray-3);
+  transition: 0.15s linear;
+  left: 0px;
+  bottom: 0;
+}
+
+.switcher-img {
+  stroke: #969696;
+  display: block;
+  margin: 0 auto;
+}

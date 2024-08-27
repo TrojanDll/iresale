@@ -30,15 +30,18 @@ gulp.task("clean", function (done) {
 });
 
 gulp.task("sass", function () {
-  return gulp
-    .src("./src/sass/*.scss")
-    .pipe(plumber(plumberNotify("SCSS")))
-    .pipe(sourceMaps.init())
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(csso())
-    .pipe(sourceMaps.write())
-    .pipe(gulp.dest("./src/css"));
+  return (
+    gulp
+      .src("./src/sass/*.scss")
+      .pipe(plumber(plumberNotify("SCSS")))
+      .pipe(sourceMaps.init())
+      // .pipe(autoprefixer())
+      .pipe(sassGlob())
+      .pipe(sass())
+      .pipe(csso())
+      .pipe(sourceMaps.write())
+      .pipe(gulp.dest("./src/css"))
+  );
 });
 
 gulp.task("sasslibs", function () {
