@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./css/nice-select2.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Рассрочка</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-top">
+        <div class="container header-top-container">
+          <div class="header-top__left-items">
+            <img src="./assets/img/icons/marker-pin.svg" alt="marker-pin" />
+            г. Москва ш. Энтузиастов, 31, стр. 38, <span>офис 2, этаж 2</span>
+          </div>
+
+          <div class="header-top__right-items">
+            <a href="#" class="header-top__right-item-link">
+              <img src="./assets/img/icons/whatsapp.svg" alt="whatsapp" />
+              WhatsApp
+            </a>
+            <a href="#" class="header-top__right-item-link">
+              <img src="./assets/img/icons/telegram.svg" alt="telegram" />
+              Telegram
+            </a>
+            <a
+              href="tel:79999103380"
+              class="header-top__right-item-link header-top__right-item-link_phone"
+            >
+              +7 (999) 910-33-80
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-bottom">
+        <div class="container header-bottom-container">
+          <a href="./index.html" class="header-bottom__logo">
+            <img src="./assets/img/logo.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-info">
+      <div class="container">
+        <div class="page-info__breadcrumbs">
+          <span>Главная</span>
+          <div class="page-info__breadcrumbs__divider"></div>
+          <span>Рассрочка</span>
+        </div>
+
+        <h1 class="page-info__title">Рассрочка</h1>
+
+        <div class="page-info__description">
+          Есть желание купить Apple или другие гаджеты, но не хотите сразу расставаться с крупной
+          суммой?
+        </div>
+      </div>
+    </section>
+
+    <section class="installment-plan">
+      <div class="container substrate installment-plan__substrate">
+        <div class="installment-plan__wrapper">
+          <div class="installment-plan__description">
+            Покупая в рассрочку, вы ничего не переплачиваете — общая сумма выплат будет равна
+            первоначальной стоимости, но при этом вы уплатите её частями на протяжении всего срока
+            рассрочки.
+          </div>
+
+          <img src="./assets/img/all-devices.png" alt="all-devices" class="installment-plan__img" />
+
+          <div class="installment-plan__switcher switcher">
+            <div class="installment-plan__devices-indicator-row switcher-indicator-row"></div>
+            <div class="installment-plan__devices-indicator switcher-indicator"></div>
+            <button class="active">
+              <svg
+                class="switcher-img"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.0007 29.1666H20.0173M13.6673 36.6666H26.334C28.2008 36.6666 29.1342 36.6666 29.8473 36.3033C30.4745 35.9838 30.9844 35.4738 31.304 34.8466C31.6673 34.1336 31.6673 33.2002 31.6673 31.3333V8.66665C31.6673 6.7998 31.6673 5.86638 31.304 5.15334C30.9844 4.52614 30.4745 4.0162 29.8473 3.69662C29.1342 3.33331 28.2008 3.33331 26.334 3.33331H13.6673C11.8005 3.33331 10.8671 3.33331 10.154 3.69662C9.52681 4.0162 9.01687 4.52614 8.6973 5.15334C8.33398 5.86638 8.33398 6.79981 8.33398 8.66665V31.3333C8.33398 33.2002 8.33398 34.1336 8.6973 34.8466C9.01687 35.4738 9.52681 35.9838 10.154 36.3033C10.8671 36.6666 11.8005 36.6666 13.6673 36.6666ZM20.834 29.1666C20.834 29.6269 20.4609 30 20.0007 30C19.5404 30 19.1673 29.6269 19.1673 29.1666C19.1673 28.7064 19.5404 28.3333 20.0007 28.3333C20.4609 28.3333 20.834 28.7064 20.834 29.1666Z"
+                  stroke="inherit"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              iPhone
+            </button>
+            <button>
+              <svg
+                class="switcher-img"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.33398 23.3333L36.6673 23.3333M13.334 35H26.6673M11.334 30H28.6673C31.4676 30 32.8677 30 33.9373 29.455C34.8781 28.9757 35.643 28.2108 36.1224 27.27C36.6673 26.2004 36.6673 24.8003 36.6673 22V13C36.6673 10.1997 36.6673 8.79961 36.1224 7.73005C35.643 6.78924 34.8781 6.02433 33.9373 5.54497C32.8677 5 31.4676 5 28.6673 5H11.334C8.53372 5 7.13359 5 6.06403 5.54497C5.12322 6.02433 4.35832 6.78924 3.87895 7.73005C3.33398 8.79961 3.33398 10.1997 3.33398 13V22C3.33398 24.8003 3.33398 26.2004 3.87895 27.27C4.35832 28.2108 5.12322 28.9757 6.06403 29.455C7.13359 30 8.53372 30 11.334 30Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              MacBook
+            </button>
+            <button>
+              <svg
+                class="switcher-img"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.00065 26.6667V12C5.00065 10.1332 5.00065 9.19976 5.36396 8.48672C5.68354 7.85951 6.19348 7.34958 6.82068 7.03C7.53372 6.66669 8.46714 6.66669 10.334 6.66669H29.6673C31.5342 6.66669 32.4676 6.66669 33.1806 7.03C33.8078 7.34958 34.3178 7.85951 34.6373 8.48672C35.0007 9.19976 35.0007 10.1332 35.0007 12V26.6667H26.1052C25.6976 26.6667 25.4937 26.6667 25.3019 26.7127C25.1319 26.7536 24.9693 26.8209 24.8202 26.9123C24.652 27.0154 24.5079 27.1595 24.2196 27.4477L24.115 27.5523C23.8268 27.8406 23.6827 27.9847 23.5145 28.0878C23.3653 28.1791 23.2028 28.2465 23.0327 28.2873C22.8409 28.3334 22.6371 28.3334 22.2294 28.3334H17.7719C17.3642 28.3334 17.1604 28.3334 16.9686 28.2873C16.7985 28.2465 16.636 28.1791 16.4868 28.0878C16.3186 27.9847 16.1745 27.8406 15.8863 27.5523L15.7817 27.4477C15.4934 27.1595 15.3493 27.0154 15.1811 26.9123C15.032 26.8209 14.8694 26.7536 14.6994 26.7127C14.5076 26.6667 14.3037 26.6667 13.8961 26.6667H5.00065ZM5.00065 26.6667C4.08018 26.6667 3.33398 27.4129 3.33398 28.3334V28.8889C3.33398 29.9222 3.33398 30.4389 3.44756 30.8628C3.75579 32.0131 4.65428 32.9115 5.80459 33.2198C6.22848 33.3334 6.74513 33.3334 7.77843 33.3334H32.2229C33.2562 33.3334 33.7728 33.3334 34.1967 33.2198C35.347 32.9115 36.2455 32.0131 36.5537 30.8628C36.6673 30.4389 36.6673 29.9222 36.6673 28.8889C36.6673 28.3723 36.6673 28.1139 36.6105 27.902C36.4564 27.3268 36.0072 26.8776 35.432 26.7235C35.2201 26.6667 34.9617 26.6667 34.4451 26.6667H33.334"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              iMac
+            </button>
+            <button>
+              <svg
+                class="switcher-img"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M24.9993 3.33331V5.66665C24.9993 6.60007 24.9993 7.06678 24.8177 7.4233C24.6579 7.7369 24.4029 7.99187 24.0893 8.15166C23.7328 8.33331 23.2661 8.33331 22.3327 8.33331H17.666C16.7326 8.33331 16.2659 8.33331 15.9094 8.15166C15.5958 7.99187 15.3408 7.7369 15.181 7.4233C14.9993 7.06678 14.9993 6.60007 14.9993 5.66665V3.33331M11.9993 36.6666H27.9993C29.8662 36.6666 30.7996 36.6666 31.5126 36.3033C32.1399 35.9838 32.6498 35.4738 32.9694 34.8466C33.3327 34.1336 33.3327 33.2002 33.3327 31.3333V8.66665C33.3327 6.7998 33.3327 5.86638 32.9694 5.15334C32.6498 4.52614 32.1399 4.0162 31.5126 3.69662C30.7996 3.33331 29.8662 3.33331 27.9993 3.33331H11.9993C10.1325 3.33331 9.19909 3.33331 8.48605 3.69662C7.85884 4.0162 7.34891 4.52614 7.02933 5.15334C6.66602 5.86638 6.66602 6.79981 6.66602 8.66665V31.3333C6.66602 33.2002 6.66602 34.1336 7.02933 34.8466C7.34891 35.4738 7.85884 35.9838 8.48605 36.3033C9.19909 36.6666 10.1325 36.6666 11.9993 36.6666Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              iPad
+            </button>
+          </div>
+
+          <div class="switcher-tabs">
+            <!-- Здесь расположить все табы по порядку -->
+            <div class="installment-plan__parameters-wrapper switcher-tab">
+              <div class="installment-plan__parameters">
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">iPhone 15 128 Gb</option>
+                  <option value="1">iPhone 15 256 Gb</option>
+                  <option value="2">iPhone 15 512 Gb</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">128 ГБ</option>
+                  <option value="1">256 ГБ</option>
+                  <option value="2">512 ГБ</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">12 месяцев</option>
+                  <option value="1">24 месяцев</option>
+                  <option value="2">36 месяцев</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="installment-plan__parameters-wrapper switcher-tab">
+              <div class="installment-plan__parameters">
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">MacBook 15 128 Gb</option>
+                  <option value="1">iPhone 15 256 Gb</option>
+                  <option value="2">iPhone 15 512 Gb</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">128 ГБ</option>
+                  <option value="1">256 ГБ</option>
+                  <option value="2">512 ГБ</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">12 месяцев</option>
+                  <option value="1">24 месяцев</option>
+                  <option value="2">36 месяцев</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="installment-plan__parameters-wrapper switcher-tab">
+              <div class="installment-plan__parameters">
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">iMac 15 128 Gb</option>
+                  <option value="1">iPhone 15 256 Gb</option>
+                  <option value="2">iPhone 15 512 Gb</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">128 ГБ</option>
+                  <option value="1">256 ГБ</option>
+                  <option value="2">512 ГБ</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">12 месяцев</option>
+                  <option value="1">24 месяцев</option>
+                  <option value="2">36 месяцев</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="installment-plan__parameters-wrapper switcher-tab">
+              <div class="installment-plan__parameters">
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">iPad 15 128 Gb</option>
+                  <option value="1">iPhone 15 256 Gb</option>
+                  <option value="2">iPhone 15 512 Gb</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">128 ГБ</option>
+                  <option value="1">256 ГБ</option>
+                  <option value="2">512 ГБ</option>
+                </select>
+
+                <select name="model" class="select installment-plan__select">
+                  <option data-display="Select">12 месяцев</option>
+                  <option value="1">24 месяцев</option>
+                  <option value="2">36 месяцев</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="installment-plan__notice">
+            * В программе «Рассрочка без преплат» участвуют ноутбуки Apple MacBook Air 11,6«,
+            планшеты Apple iPad и iPad Pro, смартфоны Apple iPhone 6/6s, 8, X, умные часы Apple
+            Watch S3, а также многочисленные аксессуары
+          </div>
+
+          <button class="button installment-plan__submit">Оставить заявку</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="terms">
+      <div class="container">
+        <div class="terms-wrapper">
+          <div class="substrate terms__item">
+            <svg
+              width="42"
+              height="42"
+              viewBox="0 0 42 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M36.75 17.5H5.25M28 3.5V10.5M14 3.5V10.5M13.65 38.5H28.35C31.2903 38.5 32.7604 38.5 33.8834 37.9278C34.8713 37.4244 35.6744 36.6213 36.1778 35.6334C36.75 34.5104 36.75 33.0403 36.75 30.1V15.4C36.75 12.4597 36.75 10.9896 36.1778 9.86655C35.6744 8.8787 34.8713 8.07555 33.8834 7.57222C32.7604 7 31.2903 7 28.35 7H13.65C10.7097 7 9.23959 7 8.11655 7.57222C7.1287 8.07555 6.32555 8.8787 5.82222 9.86655C5.25 10.9896 5.25 12.4597 5.25 15.4V30.1C5.25 33.0403 5.25 34.5104 5.82222 35.6334C6.32555 36.6213 7.1287 37.4244 8.11655 37.9278C9.23959 38.5 10.7097 38.5 13.65 38.5Z"
+                stroke="#3C9939"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <div class="terms__item__title">0₽ первого взноса</div>
+            <div class="terms__item__desription">
+              Заберите новое устройство уже сейчас, а первый платеж нужно будет внести только через
+              месяц.
+            </div>
+          </div>
+
+          <div class="substrate terms__item">
+            <svg
+              width="43"
+              height="42"
+              viewBox="0 0 43 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.334 16.625V23.625L25.709 26.25M21.334 8.75C13.1187 8.75 6.45898 15.4098 6.45898 23.625C6.45898 31.8402 13.1187 38.5 21.334 38.5C29.5492 38.5 36.209 31.8402 36.209 23.625C36.209 15.4098 29.5492 8.75 21.334 8.75ZM21.334 8.75V3.5M17.834 3.5H24.834M35.9097 9.78607L33.2847 7.16107L34.5972 8.47357M6.75827 9.78607L9.38327 7.16107L8.07077 8.47357"
+                stroke="#3C9939"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <div class="terms__item__title">Рассмотрение 10 минут</div>
+            <div class="terms__item__desription">
+              После заполнения короткой анкеты, ожидание одобрения кредита от банков составит всего
+              10 минут.
+            </div>
+          </div>
+
+          <div class="substrate terms__item">
+            <svg
+              width="43"
+              height="42"
+              viewBox="0 0 43 42"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M23.416 8.75C23.416 10.683 19.1068 12.25 13.791 12.25C8.47527 12.25 4.16602 10.683 4.16602 8.75M23.416 8.75C23.416 6.817 19.1068 5.25 13.791 5.25C8.47527 5.25 4.16602 6.817 4.16602 8.75M23.416 8.75V11.375M4.16602 8.75V29.75C4.16602 31.683 8.47527 33.25 13.791 33.25M13.791 19.25C13.4961 19.25 13.2042 19.2452 12.916 19.2357C8.01033 19.075 4.16602 17.5757 4.16602 15.75M13.791 26.25C8.47527 26.25 4.16602 24.683 4.16602 22.75M39.166 20.125C39.166 22.058 34.8568 23.625 29.541 23.625C24.2253 23.625 19.916 22.058 19.916 20.125M39.166 20.125C39.166 18.192 34.8568 16.625 29.541 16.625C24.2253 16.625 19.916 18.192 19.916 20.125M39.166 20.125V33.25C39.166 35.183 34.8568 36.75 29.541 36.75C24.2253 36.75 19.916 35.183 19.916 33.25V20.125M39.166 26.6875C39.166 28.6205 34.8568 30.1875 29.541 30.1875C24.2253 30.1875 19.916 28.6205 19.916 26.6875"
+                stroke="#3C9939"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <div class="terms__item__title">От 6 до 36 месяцев</div>
+            <div class="terms__item__desription">
+              Выбирайте сами, на какой срок комфортнее будет оформить рассрочку/кредит.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="substrate faq-wrapper">
+          <h2 class="faq__title">Частые вопросы</h2>
+
+          <div class="faq__accordion-wrapper">
+            <div class="faq__accordion-item">
+              <button class="faq__accordion-header">
+                Что нужно для оформления рассрочки или кредита?
+              </button>
+              <div class="faq__accordion-content">
+                <p>
+                  К сожалению, нет. Рассрочку можно оформить только на товар, который имеется в
+                  наличии.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__accordion-item">
+              <button class="faq__accordion-header">Как оформить рассрочку онлайн?</button>
+              <div class="faq__accordion-content">
+                <p>
+                  К сожалению, нет. Рассрочку можно оформить только на товар, который имеется в
+                  наличии.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__accordion-item">
+              <button class="faq__accordion-header">
+                Возможно ли оформить рассрочку с Trade-in?
+              </button>
+              <div class="faq__accordion-content">
+                <p>
+                  К сожалению, нет. Рассрочку можно оформить только на товар, который имеется в
+                  наличии.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__accordion-item">
+              <button class="faq__accordion-header">Может ли пенсионер оформить рассрочку?</button>
+              <div class="faq__accordion-content">
+                <p>
+                  К сожалению, нет. Рассрочку можно оформить только на товар, который имеется в
+                  наличии.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__accordion-item">
+              <button class="faq__accordion-header">Возможна ли рассрочка при предзаказе?</button>
+              <div class="faq__accordion-content">
+                <p>
+                  К сожалению, нет. Рассрочку можно оформить только на товар, который имеется в
+                  наличии.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq__accordion-item">
+              <button class="faq__accordion-header">Кто может оформить рассрочку?</button>
+              <div class="faq__accordion-content">
+                <p>
+                  К сожалению, нет. Рассрочку можно оформить только на товар, который имеется в
+                  наличии.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="substrate footer-wrapper">
+          <div class="footer__logo-column">
+            <a href="./index.html" class="footer__logo">
+              <img src="./assets/img/logo.svg" alt="" />
+            </a>
+          </div>
+
+          <div class="footer__contacts">
+            <a href="tel:79999103380" class="footer__contacts__phone">+7 (999) 910-33-80</a>
+            <div class="footer__contacts__social-wrapper">
+              <a href="#" class="footer__contacts__social">
+                <svg
+                  width="14"
+                  height="12"
+                  viewBox="0 0 14 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M13.057 0.232781C12.9111 0.286452 3.82433 3.76498 1.26955 4.74516C0.878488 4.89519 0.484336 5.0573 0.393643 5.10538C-0.0984306 5.3664 -0.132495 5.70085 0.310207 5.92449C0.355389 5.94733 1.13312 6.19575 2.03852 6.47659L3.68465 6.98717L7.41929 4.65036C9.47332 3.3651 11.1958 2.29905 11.247 2.28134C11.376 2.23676 11.4843 2.24114 11.5362 2.29306C11.5765 2.33334 11.5761 2.3433 11.5313 2.41387C11.5045 2.45618 10.1394 3.69526 8.49775 5.1674C6.85613 6.63954 5.50913 7.8536 5.50445 7.86532C5.49974 7.87704 5.44388 8.61444 5.38032 9.50395L5.26476 11.1213H5.32229C5.35395 11.1213 5.44322 11.1025 5.52069 11.0794C5.67723 11.033 5.67452 11.0353 6.7932 9.96434C7.1511 9.62172 7.45645 9.34138 7.47178 9.34138C7.48712 9.34138 8.21712 9.86716 9.09404 10.5098C9.97093 11.1524 10.7562 11.7095 10.839 11.7478C11.0558 11.8481 11.3064 11.8584 11.4648 11.7737C11.6074 11.6973 11.7233 11.5452 11.7948 11.3403C11.8237 11.2575 12.3316 8.92858 12.9235 6.16494C13.9087 1.56448 13.9996 1.11819 14 0.880007C14.0003 0.654918 13.991 0.601412 13.9307 0.482953C13.8882 0.399434 13.8156 0.314164 13.7448 0.264326C13.5828 0.150358 13.3145 0.138063 13.057 0.232781Z"
+                    fill="#5D5D5D"
+                  />
+                </svg>
+                Telegram
+              </a>
+              <a href="#" class="footer__contacts__social">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="#5D5D5D"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.19494 0.0418574C4.8608 0.206205 3.595 0.752756 2.56183 1.61057C2.29747 1.83006 1.80305 2.32894 1.59871 2.58237C0.76694 3.61393 0.221315 4.93424 0.0853492 6.24438C0.0357604 6.72235 0.0657956 7.62736 0.146447 8.08416C0.274368 8.80893 0.477069 9.41953 0.809541 10.0816L0.97927 10.4196L0.489635 12.1994C0.220346 13.1783 0 13.9869 0 13.9965C0 14.006 0.0627421 13.9956 0.13946 13.9733C0.216177 13.9511 1.0438 13.7338 1.97865 13.4905L3.67842 13.0482L3.96045 13.1794C4.7253 13.5351 5.36661 13.7267 6.14016 13.8305C6.62063 13.8949 7.44227 13.8949 7.92718 13.8303C10.2131 13.5261 12.189 12.1402 13.2382 10.1052C13.8023 9.0111 14.0305 7.99726 13.9968 6.73581C13.9673 5.63573 13.747 4.76428 13.2529 3.79251C12.3061 1.93047 10.5584 0.590891 8.49218 0.143439C7.83974 0.00216511 6.86661 -0.0408861 6.19494 0.0418574ZM8.02994 1.25074C8.8935 1.40994 9.53563 1.66737 10.2613 2.14526C11.4301 2.91498 12.3088 4.1476 12.6518 5.49866C12.9038 6.49123 12.884 7.6186 12.5977 8.57302C11.9931 10.5896 10.3321 12.1269 8.26481 12.5833C7.70765 12.7063 6.8063 12.7404 6.23898 12.6598C5.48261 12.5525 4.7635 12.3052 4.09897 11.9238C3.87075 11.7929 3.86165 11.7904 3.73079 11.822C3.65698 11.8398 3.16837 11.9664 2.645 12.1034C2.12164 12.2404 1.68905 12.3481 1.68373 12.3428C1.67839 12.3375 1.80047 11.8741 1.95499 11.3131C2.10954 10.752 2.23673 10.2733 2.23769 10.2492C2.23863 10.2251 2.16262 10.0805 2.06879 9.92794C0.685378 7.67812 1.04759 4.72976 2.93708 2.85984C3.87897 1.9277 5.06529 1.35778 6.40046 1.19597C6.76159 1.15222 7.65918 1.18239 8.02994 1.25074ZM4.29086 3.79902C4.12107 3.88264 3.81083 4.24714 3.68112 4.51541C3.42163 5.05212 3.43206 5.72601 3.70954 6.35008C4.05757 7.13279 4.94127 8.237 5.7608 8.91314C6.35583 9.40411 6.84702 9.68931 7.57486 9.96649C8.26614 10.2297 8.40818 10.2623 8.86669 10.263C9.23102 10.2635 9.28158 10.2568 9.49238 10.1798C9.78081 10.0743 10.1039 9.8659 10.2784 9.67255C10.4374 9.49652 10.5321 9.24326 10.5595 8.92129C10.5894 8.56858 10.6061 8.58836 10.0421 8.30744C9.30636 7.94101 8.96819 7.79582 8.85049 7.79582C8.73129 7.79582 8.70169 7.82193 8.43516 8.16223C8.08739 8.60623 8.00701 8.68372 7.89421 8.68372C7.76432 8.68372 7.14012 8.3858 6.80768 8.16515C6.51881 7.9734 6.17471 7.67672 5.95516 7.43009C5.63067 7.06556 5.28478 6.55292 5.28478 6.43647C5.28478 6.4018 5.39518 6.23015 5.53012 6.05508C5.78975 5.71821 5.87198 5.58368 5.87198 5.49598C5.87198 5.44618 5.33129 4.11472 5.23889 3.93696C5.15076 3.76739 5.0714 3.73605 4.73032 3.73608C4.47034 3.73608 4.39747 3.74653 4.29086 3.79902Z"
+                    fill="#5D5D5D"
+                  />
+                </svg>
+                WhatsApp
+              </a>
+            </div>
+
+            <div class="footer__contacts__address">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_178_2226)">
+                  <path
+                    d="M3.33398 9.52416C2.09974 10.0686 1.33398 10.8274 1.33398 11.6666C1.33398 13.3234 4.31875 14.6666 8.00065 14.6666C11.6826 14.6666 14.6673 13.3234 14.6673 11.6666C14.6673 10.8274 13.9016 10.0686 12.6673 9.52416M12.0007 5.33325C12.0007 8.04239 9.00065 9.33325 8.00065 11.3333C7.00065 9.33325 4.00065 8.04239 4.00065 5.33325C4.00065 3.12411 5.79151 1.33325 8.00065 1.33325C10.2098 1.33325 12.0007 3.12411 12.0007 5.33325ZM8.66732 5.33325C8.66732 5.70144 8.36884 5.99992 8.00065 5.99992C7.63246 5.99992 7.33398 5.70144 7.33398 5.33325C7.33398 4.96506 7.63246 4.66659 8.00065 4.66659C8.36884 4.66659 8.66732 4.96506 8.66732 5.33325Z"
+                    stroke="#5D5D5D"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_178_2226">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              г. Москва ш. Энтузиастов, 31, стр. 38, офис 2, этаж 2
+            </div>
+          </div>
+
+          <div class="footer__copyright">© iResale, 2024.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+    <script src="./js/nice-select2.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

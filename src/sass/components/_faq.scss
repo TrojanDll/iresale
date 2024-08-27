@@ -95,4 +95,12 @@
   .faq-wrapper {
     padding: 32px 20px;
   }
+
+  .faq__accordion-content {
+    font-size: 14px;
+
+    & p {
+      margin-bottom: 16px;
+    }
+  }
 }

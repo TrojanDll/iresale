@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "gulp"
+    "dev": "gulp",
+    "prod": "gulp prod"
   },
   "devDependencies": {
     "gulp": "^5.0.0",

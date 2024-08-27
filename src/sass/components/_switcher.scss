@@ -24,11 +24,11 @@
   }
 
   & .active {
+    color: var(--green);
+
     & .switcher-img {
       stroke: var(--green);
     }
-
-    color: var(--green);
   }
 }
 

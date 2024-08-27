@@ -29,6 +29,13 @@ gulp.task("clean", function (done) {
   done();
 });
 
+gulp.task("cleanProd", function (done) {
+  if (fs.existsSync("./dist/")) {
+    return gulp.src("./dist/", { read: false }).pipe(clean());
+  }
+  done();
+});
+
 gulp.task("sass", function () {
   return (
     gulp
@@ -44,8 +51,35 @@ gulp.task("sass", function () {
   );
 });
 
+gulp.task("sassProd", function () {
+  return gulp
+    .src("./src/sass/*.scss")
+    .pipe(plumber(plumberNotify("SCSS")))
+    .pipe(sassGlob())
+    .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(csso())
+    .pipe(gulp.dest("./dist/css"));
+});
+
 gulp.task("sasslibs", function () {
   return gulp.src("./src/sass/libs/*.scss").pipe(sass()).pipe(csso()).pipe(gulp.dest("./src/css"));
+});
+
+gulp.task("sasslibsProd", function () {
+  return gulp.src("./src/sass/libs/*.scss").pipe(sass()).pipe(csso()).pipe(gulp.dest("./dist/css"));
+});
+
+gulp.task("htmlProd", function () {
+  return gulp.src("./src/*.html").pipe(gulp.dest("./dist/"));
+});
+
+gulp.task("assetsProd", function () {
+  return gulp.src("./src/assets/**/*", { encoding: false }).pipe(gulp.dest("./dist/assets"));
+});
+
+gulp.task("jsProd", function () {
+  return gulp.src("./src/js/**/*", { encoding: false }).pipe(gulp.dest("./dist/js"));
 });
 
 gulp.task("server", function () {
@@ -65,4 +99,12 @@ gulp.task("watch", function () {
 gulp.task(
   "default",
   gulp.series("clean", gulp.parallel("sass", "sasslibs"), gulp.parallel("watch", "server"))
+);
+
+gulp.task(
+  "prod",
+  gulp.series(
+    "cleanProd",
+    gulp.parallel("sassProd", "sasslibsProd", "htmlProd", "assetsProd", "jsProd")
+  )
 );
