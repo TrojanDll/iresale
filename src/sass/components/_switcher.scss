@@ -14,10 +14,6 @@
     text-align: center;
     color: var(--gray-3);
 
-    &:hover:not(.active) {
-      // background-color: var(--grey-hover);
-    }
-
     & * {
       pointer-events: none;
     }
