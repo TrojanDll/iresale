@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .header-top {
   width: 100%;
   padding-top: 10px;
@@ -105,21 +109,21 @@
   line-height: 133%;
   color: var(--black);
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    width: 0%;
-    background-color: var(--black);
-    transition: all 0.3s;
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   height: 1px;
+  //   width: 0%;
+  //   background-color: var(--black);
+  //   transition: all 0.3s;
+  // }
 
-  &:hover::after {
-    width: 100%;
-  }
+  // &:hover::after {
+  //   width: 100%;
+  // }
 }
 
 .header-bottom__sub-nav {
@@ -162,6 +166,94 @@
   color: var(--grey-4);
   padding-top: 1px;
   padding-left: 1px;
+}
+
+.header__catalog {
+  display: none;
+  z-index: 100;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+}
+
+.header__catalog_opened {
+  display: block;
+  height: 525px;
+}
+
+.header__catalog-container {
+  margin-top: 2px;
+  background-color: #ffffff;
+  display: flex;
+  height: 525px;
+}
+
+.header__catalog-nav {
+  padding: 45px 30px;
+  width: 32%;
+  background-color: #f9f9f9;
+}
+
+.header__catalog-nav__item {
+  position: relative;
+  margin-top: 6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 12px;
+  border-radius: 4px;
+  padding: 0px 4px;
+  height: 34px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black);
+
+  &:hover {
+    color: var(--green);
+    background-color: #ffffff;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    background: url("./../assets/img/icons/chevron-down.svg") center center/cover no-repeat;
+    transform: translateY(-50%) rotate(-90deg);
+  }
+}
+
+.header__catalog__items-wrapper {
+  width: 68%;
+}
+
+.header__catalog__items {
+  display: none;
+  width: 100%;
+  padding: 46px 66px;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 32px;
+}
+
+.header__catalog__item {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  color: var(--black-2);
+}
+
+.header__catalog__items_active {
+  display: grid;
 }
 
 @media (max-width: 1240px) {
