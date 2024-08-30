@@ -27,6 +27,13 @@
     color: var(--gray-3);
     opacity: 0.99;
   }
+
+  & a {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 138%;
+    color: var(--light);
+  }
 }
 
 .header-top__right-items {

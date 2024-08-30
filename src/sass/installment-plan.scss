@@ -5,11 +5,16 @@
 
 // ui
 @import "./ui/substrate";
+@import "./ui/select";
 @import "./ui/button";
 
 // components
 @import "./components/body";
 @import "./components/container";
 @import "./components/header";
-@import "./components/promo";
+@import "./components/page-info";
+@import "./components/installment-plan";
+@import "./components/switcher";
+@import "./components/terms";
+@import "./components/faq";
 @import "./components/footer";
