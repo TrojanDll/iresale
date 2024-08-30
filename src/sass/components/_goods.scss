@@ -1,0 +1,39 @@
+.goods-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.goods-item {
+  display: block;
+  padding: 0;
+  padding-top: 24px;
+  width: 23%;
+
+  & img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 23px;
+  }
+
+  &:nth-child(7n + 2) {
+    width: 49%;
+  }
+}
+
+.goods-item__title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--black);
+}
+
+.goods-item__price {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  text-align: center;
+  color: var(--gray);
+}
