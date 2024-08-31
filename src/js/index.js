@@ -95,6 +95,34 @@ const reviewsSwiper = new Swiper(".reviews__slider", {
   slidesPerView: 2.8,
   // loop: true,
   spaceBetween: 30,
+  mousewheel: {
+    enabled: true,
+    eventsTarget: "container",
+  },
+  breakpoints: {
+    320: {
+      centeredSlides: true,
+      // initialSlide: 1,
+    },
+    576: {
+      centeredSlides: false,
+    },
+  },
+});
+
+const newsSwiper = new Swiper(".news__slider", {
+  navigation: {
+    prevEl: ".news-prev",
+    nextEl: ".news-next",
+  },
+  // pagination: {
+  //   el: ".reviews__pagination",
+  //   clickable: true,
+  // },
+  // autoHeight: true,
+  slidesPerView: 3,
+  // loop: true,
+  spaceBetween: 30,
   // mousewheel: {
   //   enabled: true,
   //   eventsTarget: "container",
