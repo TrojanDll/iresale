@@ -54,7 +54,7 @@ new Menu().init();
 
 // ----------------------------- Slider -----------------------------------
 
-const clothesSwiper = new Swiper(".promo__slider", {
+const promoSwiper = new Swiper(".promo__slider", {
   navigation: {
     prevEl: ".promo__slider-prev",
     nextEl: ".promo__slider-next",
@@ -65,8 +65,36 @@ const clothesSwiper = new Swiper(".promo__slider", {
   },
   // autoHeight: true,
   slidesPerView: 1,
-  loop: true,
+  // loop: true,
   // spaceBetween: 21,
+  // mousewheel: {
+  //   enabled: true,
+  //   eventsTarget: "container",
+  // },
+  breakpoints: {
+    320: {
+      centeredSlides: true,
+      // initialSlide: 1,
+    },
+    576: {
+      centeredSlides: false,
+    },
+  },
+});
+
+const reviewsSwiper = new Swiper(".reviews__slider", {
+  navigation: {
+    prevEl: ".reviews-prev",
+    nextEl: ".reviews-next",
+  },
+  pagination: {
+    el: ".reviews__pagination",
+    clickable: true,
+  },
+  // autoHeight: true,
+  slidesPerView: 2.8,
+  // loop: true,
+  spaceBetween: 30,
   // mousewheel: {
   //   enabled: true,
   //   eventsTarget: "container",
