@@ -1,0 +1,39 @@
+.social-banner__wrapper {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  padding: 52px;
+}
+
+.social-banner__bg {
+  position: absolute;
+  top: -117px;
+  right: 180px;
+  z-index: 1;
+}
+
+.social-banner__img {
+  width: 102px;
+  height: 102px;
+}
+
+.social-banner__text {
+  position: relative;
+  z-index: 2;
+}
+
+.social-banner__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--black-2);
+}
+
+.social-banner__description {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 137%;
+  color: var(--dark);
+}
