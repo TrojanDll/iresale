@@ -122,10 +122,10 @@ const newsSwiper = new Swiper(".news__slider", {
     prevEl: ".news-prev",
     nextEl: ".news-next",
   },
-  // pagination: {
-  //   el: ".reviews__pagination",
-  //   clickable: true,
-  // },
+  pagination: {
+    el: ".news-pagination",
+    clickable: true,
+  },
   // autoHeight: true,
   slidesPerView: 3,
   // loop: true,
@@ -137,10 +137,17 @@ const newsSwiper = new Swiper(".news__slider", {
   breakpoints: {
     320: {
       centeredSlides: true,
+      slidesPerView: 1,
       // initialSlide: 1,
     },
     576: {
       centeredSlides: false,
+      slidesPerView: 1,
+    },
+    768: {
+      centeredSlides: false,
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
   },
 });
