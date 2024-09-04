@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  row-gap: 30px;
 }
 
 .goods-item {
@@ -10,11 +11,13 @@
   padding: 0;
   padding-top: 24px;
   width: 23%;
+  overflow: hidden;
 
   & img {
     display: block;
     margin: 0 auto;
     margin-top: 23px;
+    max-width: 100%;
   }
 
   &:nth-child(7n + 2) {
@@ -36,4 +39,58 @@
   line-height: 157%;
   text-align: center;
   color: var(--gray);
+}
+
+@media (max-width: 1240px) {
+  .goods-wrapper {
+    gap: unset;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .goods-wrapper {
+    row-gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .goods-item {
+    width: calc(50% - 8px);
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:nth-child(n + 4) {
+      order: 4;
+    }
+
+    &:nth-child(8) {
+      order: 6;
+    }
+
+    &:nth-child(9) {
+      order: 5;
+    }
+
+    &:nth-child(n + 10) {
+      order: 7;
+    }
+
+    &:nth-child(7n + 2) {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
 }
