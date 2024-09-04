@@ -1,102 +1,158 @@
-// -------------------------------- Плавный переключатель + табы ---------------------------------
+// -------------------------- Меню ----------------------------
 
-class Tabs {
+class Menu {
   constructor() {
-    this.indicator = document.querySelector(".switcher-indicator");
-    this.tabs = document.querySelectorAll(".switcher-tab");
-    this.tabsCount = this.tabs.length;
-    this.menuItems = document.querySelectorAll(".switcher button");
-    this.menuItemWidth = 100 / this.menuItems.length + "%";
+    this.body = document.querySelector("body");
+    this.menuOpenButton = document.querySelector(".header-bottom__main-nav__catalog");
+    this.menu = document.querySelector(".header__catalog");
+    this.menuLinks = document.querySelectorAll(".header__catalog-nav__item");
+    this.submenuItems = document.querySelectorAll(".header__catalog__items");
+    this.submenuLinks = document.querySelectorAll(".header__catalog__item");
   }
 
-  marker(target) {
-    this.indicator.style.left = target.offsetLeft + "px";
+  menuOpening() {
+    this.menuOpenButton.addEventListener("click", (e) => {
+      this.menu.classList.toggle("header__catalog_opened");
+      e.stopPropagation();
+    });
 
-    this.menuItems.forEach((item) => {
-      if (item != target) {
-        item.classList.remove("active");
-      } else {
-        item.classList.add("active");
+    this.menu.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") {
+        this.menu.classList.remove("header__catalog_opened");
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.closest(".header__catalog-container")) {
+        this.menu.classList.remove("header__catalog_opened");
       }
     });
   }
 
-  switchTab(tabIndex) {
-    this.tabs.forEach((tab, i) => {
-      if (tabIndex === i) {
-        tab.classList.add("switcher-tab-visible");
-      } else {
-        tab.classList.remove("switcher-tab-visible");
-      }
+  hideAllSubmenuItems() {
+    this.submenuItems.forEach((submenuItem) => {
+      submenuItem.classList.remove("header__catalog__items_active");
     });
   }
 
-  switch(e, index) {
-    this.marker(e.target);
-    this.switchTab(index);
+  itemsToggling() {
+    this.menuLinks.forEach((menuLink, menuLinkIndex) => {
+      menuLink.addEventListener("mouseenter", (e) => {
+        this.hideAllSubmenuItems();
+        this.submenuItems[menuLinkIndex].classList.add("header__catalog__items_active");
+      });
+    });
   }
 
   init() {
-    this.tabs[0].classList.add("switcher-tab-visible");
-    this.indicator.style.width = this.menuItemWidth;
-    this.menuItems.forEach((item, i) => {
-      item.style.width = this.menuItemWidth;
-      item.addEventListener("click", (e) => {
-        this.switch(e, i);
-      });
-    });
+    this.menuOpening();
+    this.itemsToggling();
   }
 }
 
-new Tabs().init();
+new Menu().init();
 
-// -------------------------- Selects ------------------------------
+// ----------------------------- Slider -----------------------------------
 
-const bindedSelects = [];
-
-document.querySelectorAll(".select").forEach((item) => {
-  bindedSelects.push(NiceSelect.bind(item));
+const promoSwiper = new Swiper(".promo__slider", {
+  navigation: {
+    prevEl: ".promo__slider-prev",
+    nextEl: ".promo__slider-next",
+  },
+  pagination: {
+    el: ".promo__slider-pagination",
+    clickable: true,
+  },
+  // autoHeight: true,
+  slidesPerView: 1,
+  // loop: true,
+  // spaceBetween: 21,
+  // mousewheel: {
+  //   enabled: true,
+  //   eventsTarget: "container",
+  // },
+  breakpoints: {
+    320: {
+      centeredSlides: true,
+      // initialSlide: 1,
+    },
+    576: {
+      centeredSlides: false,
+    },
+  },
 });
 
-// ------------------------- Accordions ----------------------------
-
-document.querySelectorAll(".faq__accordion-item").forEach((el) => {
-  const summary = el.querySelector(".faq__accordion-header");
-  const content = el.querySelector(".faq__accordion-content");
-
-  summary.addEventListener("click", (e) => {
-    e.preventDefault();
-    el.classList.toggle("faq__accordion-content_opened");
-
-    if (el.open) {
-      slideUp(content, () => {
-        el.open = false;
-      });
-    } else {
-      el.open = true;
-      slideDown(content);
-    }
-  });
+const reviewsSwiper = new Swiper(".reviews__slider", {
+  navigation: {
+    prevEl: ".reviews-prev",
+    nextEl: ".reviews-next",
+  },
+  pagination: {
+    el: ".reviews__pagination",
+    clickable: true,
+  },
+  // autoHeight: true,
+  slidesPerView: 2.8,
+  // loop: true,
+  spaceBetween: 30,
+  mousewheel: {
+    enabled: true,
+    eventsTarget: "container",
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    576: {
+      slidesPerView: 1.2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 1.8,
+    },
+    992: {
+      slidesPerView: 2.8,
+    },
+  },
 });
 
-function slideUp(element, callback) {
-  const height = element.offsetHeight;
-  element.style.height = height + "px";
-  element.offsetHeight; // Force reflow
-  element.style.height = "0";
-  element.addEventListener("transitionend", function handler() {
-    element.removeEventListener("transitionend", handler);
-    callback();
-  });
-}
-
-function slideDown(element) {
-  element.style.height = "0";
-  element.offsetHeight; // Force reflow
-  const height = element.scrollHeight;
-  element.style.height = height + "px";
-  element.addEventListener("transitionend", function handler() {
-    element.removeEventListener("transitionend", handler);
-    element.style.height = "auto";
-  });
-}
+const newsSwiper = new Swiper(".news__slider", {
+  navigation: {
+    prevEl: ".news-prev",
+    nextEl: ".news-next",
+  },
+  pagination: {
+    el: ".news-pagination",
+    clickable: true,
+  },
+  // autoHeight: true,
+  slidesPerView: 3,
+  // loop: true,
+  spaceBetween: 30,
+  // mousewheel: {
+  //   enabled: true,
+  //   eventsTarget: "container",
+  // },
+  breakpoints: {
+    320: {
+      centeredSlides: true,
+      slidesPerView: 1,
+      // initialSlide: 1,
+    },
+    576: {
+      centeredSlides: false,
+      slidesPerView: 1,
+    },
+    768: {
+      centeredSlides: false,
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    992: {
+      centeredSlides: false,
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+});
