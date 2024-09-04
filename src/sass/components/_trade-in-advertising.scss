@@ -1,5 +1,5 @@
 .trade-in-advertising__banner {
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative;
   padding: 66px 60px 78px 60px;
   background: linear-gradient(225deg, #369032 0%, #3c9939 100%);
@@ -8,8 +8,8 @@
 .trade-in-advertising__banner-bg {
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
+  top: -286px;
+  right: -40px;
 }
 
 .trade-in-advertising__title {
@@ -65,4 +65,75 @@
   font-size: 16px;
   line-height: 137%;
   color: var(--black-2);
+}
+
+@media (max-width: 992px) {
+  .trade-in-advertising__item__arrrow {
+    display: none;
+  }
+
+  .trade-in-advertising__title {
+    margin-top: 470px;
+  }
+
+  .trade-in-advertising__item {
+    padding: 24px 16px;
+  }
+
+  .trade-in-advertising__description {
+    z-index: 2;
+    position: relative;
+  }
+
+  .trade-in-advertising__banner-bg {
+    right: unset;
+    left: -336px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .trade-in-advertising__banner {
+    padding-bottom: 50px;
+  }
+
+  .trade-in-advertising__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .trade-in-advertising__banner-bg {
+    width: 181%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: translate(-34%, -33%);
+  }
+
+  .trade-in-advertising__banner {
+    padding: 30px 20px;
+  }
+
+  .trade-in-advertising__title {
+    font-size: 24px;
+  }
+
+  .trade-in-advertising__description {
+    font-size: 16px;
+    margin-top: 16px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .trade-in-advertising__title {
+    margin-top: 354px;
+  }
+}
+
+@media (max-width: 380px) {
+  .trade-in-advertising__title {
+    margin-top: 280px;
+  }
 }
