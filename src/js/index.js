@@ -101,11 +101,18 @@ const reviewsSwiper = new Swiper(".reviews__slider", {
   },
   breakpoints: {
     320: {
-      centeredSlides: true,
-      // initialSlide: 1,
+      slidesPerView: 1,
+      spaceBetween: 20,
     },
     576: {
-      centeredSlides: false,
+      slidesPerView: 1.2,
+      spaceBetween: 30,
+    },
+    768: {
+      slidesPerView: 1.8,
+    },
+    992: {
+      slidesPerView: 2.8,
     },
   },
 });
