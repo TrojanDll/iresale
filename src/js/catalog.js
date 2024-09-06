@@ -81,3 +81,67 @@ const promoSwiper = new Swiper(".scroll-catalog-small__slider", {
     },
   },
 });
+
+// -------------------------- Selects ------------------------------
+
+const bindedSelects = [];
+
+document.querySelectorAll(".select").forEach((item) => {
+  bindedSelects.push(NiceSelect.bind(item));
+});
+
+// ------------------------- Switcher -------------------------------
+
+class Tabs {
+  constructor() {
+    this.indicator = document.querySelector(".switcher-indicator");
+    this.tabs = document.querySelectorAll(".switcher-tab");
+    this.hasTabs = this.tabs.length == 0 ? false : true;
+    this.tabsCount = this.tabs.length;
+    this.menuItems = document.querySelectorAll(".switcher button");
+    this.menuItemWidth = 100 / this.menuItems.length + "%";
+  }
+
+  marker(target) {
+    this.indicator.style.left = target.offsetLeft + "px";
+    this.menuItems.forEach((item) => {
+      if (item != target) {
+        item.classList.remove("active");
+      } else {
+        item.classList.add("active");
+      }
+    });
+  }
+
+  switchTab(tabIndex) {
+    this.tabs.forEach((tab, i) => {
+      if (tabIndex === i) {
+        tab.classList.add("switcher-tab-visible");
+      } else {
+        tab.classList.remove("switcher-tab-visible");
+      }
+    });
+  }
+
+  switch(e, index) {
+    this.marker(e.target);
+    if (this.hasTabs) {
+      this.switchTab(index);
+    }
+  }
+
+  init() {
+    if (this.hasTabs) {
+      this.tabs[0].classList.add("switcher-tab-visible");
+    }
+    this.indicator.style.width = this.menuItemWidth;
+    this.menuItems.forEach((item, i) => {
+      item.style.width = this.menuItemWidth;
+      item.addEventListener("click", (e) => {
+        this.switch(e, i);
+      });
+    });
+  }
+}
+
+new Tabs().init();
