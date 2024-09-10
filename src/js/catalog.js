@@ -149,7 +149,6 @@ new Tabs().init();
 // ------------------------- Accordions ----------------------------
 
 document.querySelectorAll(".accordion-item").forEach((el) => {
-  console.log(el);
   const summary = el.querySelector(".accordion-header");
   const content = el.querySelector(".accordion-content");
 

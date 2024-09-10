@@ -83,6 +83,7 @@
 
 .catalog-goods__filter {
   width: 201px;
+  flex-shrink: 0;
 }
 
 .catalog-goods__filter-item {
@@ -246,4 +247,21 @@
 
 .catalog-goods__items {
   margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-goods__items__more-btn {
+  width: 100%;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--grey-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--green);
 }
