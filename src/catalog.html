@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/nouislider.min.css" />
     <link rel="stylesheet" href="./css/nice-select2.css" />
     <link rel="stylesheet" href="./css/catalog.css" />
     <title>Каталог</title>
@@ -618,6 +619,88 @@
               </div>
             </div>
           </div>
+
+          <div class="catalog-goods-content">
+            <div class="catalog-goods__filter">
+              <div class="catalog-goods__filter-item">
+                <div class="catalog-goods__filter__title">Цена, ₽</div>
+
+                <div id="filter-slider" class="catalog-goods__filter__slider"></div>
+
+                <div class="catalog-goods__filter__slider-input-wrapper">
+                  <input
+                    type="number"
+                    id="slider-input-min"
+                    class="catalog-goods__filter__slider-input"
+                  />
+                </div>
+                <div class="catalog-goods__filter__slider-input-wrapper">
+                  <input
+                    type="number"
+                    id="slider-input-max"
+                    class="catalog-goods__filter__slider-input"
+                  />
+                </div>
+              </div>
+
+              <div class="catalog-goods__filter-item accordion-item">
+                <button class="accordion-header">Серия</button>
+                <div class="accordion-content">
+                  <div class="catalog-goods__filter-item__checkboxes">
+                    <div class="catalog-goods__filter-item__checkbox-item">
+                      <input
+                        class="custom-checkbox"
+                        type="checkbox"
+                        id="iphone-15"
+                        name="iphone-15"
+                      />
+                      <label for="iphone-15">iPhone 15</label>
+                    </div>
+
+                    <div class="catalog-goods__filter-item__checkbox-item">
+                      <input
+                        class="custom-checkbox"
+                        type="checkbox"
+                        id="iphone-14"
+                        name="iphone-14"
+                      />
+                      <label for="iphone-14">iPhone 14</label>
+                    </div>
+
+                    <div class="catalog-goods__filter-item__checkbox-item">
+                      <input
+                        class="custom-checkbox"
+                        type="checkbox"
+                        id="iphone-13"
+                        name="iphone-13"
+                      />
+                      <label for="iphone-13">iPhone 13</label>
+                    </div>
+
+                    <div class="catalog-goods__filter-item__checkbox-item">
+                      <input
+                        class="custom-checkbox"
+                        type="checkbox"
+                        id="iphone-12"
+                        name="iphone-12"
+                      />
+                      <label for="iphone-12">iPhone 12</label>
+                    </div>
+
+                    <div class="catalog-goods__filter-item__checkbox-item">
+                      <input
+                        class="custom-checkbox"
+                        type="checkbox"
+                        id="iphone-12"
+                        name="iphone-12"
+                      />
+                      <label for="iphone-12">iPhone 12</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -779,6 +862,7 @@
       </div>
     </footer>
 
+    <script src="./js/nouislider.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/nice-select2.js"></script>
     <script src="./js/catalog.js"></script>

@@ -145,3 +145,96 @@ class Tabs {
 }
 
 new Tabs().init();
+
+// ------------------------- Accordions ----------------------------
+
+document.querySelectorAll(".accordion-item").forEach((el) => {
+  const summary = el.querySelector(".accordion-header");
+  const content = el.querySelector(".accordion-content");
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+    el.classList.toggle("accordion-content_opened");
+
+    if (el.open) {
+      slideUp(content, () => {
+        el.open = false;
+      });
+    } else {
+      el.open = true;
+      slideDown(content);
+    }
+  });
+});
+
+function slideUp(element, callback) {
+  const height = element.offsetHeight;
+  element.style.height = height + "px";
+  element.offsetHeight; // Force reflow
+  element.style.height = "0";
+  element.addEventListener("transitionend", function handler() {
+    element.removeEventListener("transitionend", handler);
+    callback();
+  });
+}
+
+function slideDown(element) {
+  element.style.height = "0";
+  element.offsetHeight; // Force reflow
+  const height = element.scrollHeight;
+  element.style.height = height + "px";
+  element.addEventListener("transitionend", function handler() {
+    element.removeEventListener("transitionend", handler);
+    element.style.height = "auto";
+  });
+}
+
+// ------------------ range slider -----------------------
+
+const rangeSlider = document.querySelector("#filter-slider");
+const rangeSliderInputMin = document.querySelector("#slider-input-min");
+const rangeSliderInputMax = document.querySelector("#slider-input-max");
+const rangeSliderMinValue = 50000;
+const rangeSliderMaxValue = 250000;
+
+noUiSlider.create(rangeSlider, {
+  start: [50000, 250000],
+  connect: true,
+  range: {
+    min: rangeSliderMinValue,
+    max: rangeSliderMaxValue,
+  },
+  step: 1000,
+});
+
+rangeSliderInputMin.value = rangeSliderMinValue;
+rangeSliderInputMax.value = rangeSliderMaxValue;
+
+rangeSlider.noUiSlider.on("start", function (values, handle) {
+  rangeSliderInputMin.value = +values[0];
+  rangeSliderInputMax.value = +values[1];
+});
+
+rangeSlider.noUiSlider.on("slide", function (values, handle) {
+  if (handle == 0) {
+    rangeSliderInputMin.value = +values[0];
+  } else {
+    rangeSliderInputMax.value = +values[1];
+  }
+});
+
+rangeSliderInputMin.addEventListener("input", function () {
+  if (+rangeSliderInputMin.value >= rangeSliderMinValue) {
+    rangeSlider.noUiSlider.set([+rangeSliderInputMin.value, +rangeSliderInputMax.value]);
+  } else {
+    rangeSlider.noUiSlider.set([rangeSliderMinValue, +rangeSliderInputMax.value]);
+  }
+});
+
+rangeSliderInputMax.addEventListener("input", function () {
+  if (+rangeSliderInputMax.value <= rangeSliderMaxValue) {
+    rangeSlider.noUiSlider.set([+rangeSliderInputMin.value, +rangeSliderInputMax.value]);
+  } else {
+    rangeSlider.noUiSlider.set([+rangeSliderInputMin.value, rangeSliderMaxValue]);
+  }
+});
