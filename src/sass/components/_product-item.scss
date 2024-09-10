@@ -1,0 +1,84 @@
+.product-item {
+  width: 244px;
+  padding: 24px;
+  padding-top: 16px;
+
+  & > img {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.product-item__title {
+  margin-top: 35px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #1d2023;
+}
+
+.product-item__price-wrapper {
+  margin-top: 26px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item__price {
+  display: block;
+  flex-shrink: 0;
+}
+
+.product-item__price-old {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  text-decoration: line-through;
+  color: var(--gray-2);
+}
+
+.product-item__price-new {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 122%;
+  color: var(--green);
+
+  & span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 122%;
+    color: var(--gray-2);
+  }
+}
+
+.product-item__cart {
+  display: block;
+  border-radius: 8px;
+  padding: 8px;
+  width: 37px;
+  height: 37px;
+  background-color: var(--green);
+
+  & img {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+.product-item__availability {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 117%;
+  color: var(--dark);
+
+  & img {
+    width: 14px;
+    height: 14px;
+    // margin-right: 4px;
+  }
+}

@@ -149,6 +149,7 @@ new Tabs().init();
 // ------------------------- Accordions ----------------------------
 
 document.querySelectorAll(".accordion-item").forEach((el) => {
+  console.log(el);
   const summary = el.querySelector(".accordion-header");
   const content = el.querySelector(".accordion-content");
 
@@ -237,4 +238,14 @@ rangeSliderInputMax.addEventListener("input", function () {
   } else {
     rangeSlider.noUiSlider.set([+rangeSliderInputMin.value, rangeSliderMaxValue]);
   }
+});
+
+// ---------------------- Отмена фильтра ----------------------
+
+const appliedFilters = document.querySelectorAll(".catalog-goods__items__applied-filter");
+
+appliedFilters.forEach((filter) => {
+  filter.addEventListener("click", (e) => {
+    e.target.style.display = "none";
+  });
 });

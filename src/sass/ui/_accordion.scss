@@ -2,17 +2,17 @@
   border-bottom: 1px solid var(--light);
   overflow: hidden;
 
-  &:last-child {
-    border: none;
-  }
+  // &:last-child {
+  //   border: none;
+  // }
 
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: var(--light);
-  }
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   width: 100%;
+  //   height: 1px;
+  //   background-color: var(--light);
+  // }
 }
 
 .accordion-header {
