@@ -1,3 +1,5 @@
+// import Pagination from "s-pagination";
+
 // -------------------------- Меню ----------------------------
 
 class Menu {
@@ -74,10 +76,24 @@ const promoSwiper = new Swiper(".scroll-catalog-small__slider", {
   breakpoints: {
     320: {
       centeredSlides: true,
+      spaceBetween: 24,
+      slidesPerView: "auto",
+
       // initialSlide: 1,
     },
     576: {
       centeredSlides: false,
+      spaceBetween: 37,
+      slidesPerView: 3.5,
+    },
+    768: {
+      slidesPerView: 6.1,
+    },
+    992: {
+      slidesPerView: 8.1,
+    },
+    1240: {
+      slidesPerView: "auto",
     },
   },
 });
@@ -248,3 +264,15 @@ appliedFilters.forEach((filter) => {
     e.target.style.display = "none";
   });
 });
+
+// ---------------------- Pagination -----------------------------
+
+let paginationElementsCount = 10;
+
+var pagination = new Pagination({
+  container: document.querySelector("#pagination"),
+  pageClickCallback: function (pageNumber) {},
+  enhancedMode: false,
+  maxVisibleElements: paginationElementsCount,
+});
+pagination.make(20, 1);

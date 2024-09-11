@@ -265,3 +265,67 @@
   line-height: 125%;
   color: var(--green);
 }
+
+.catalog-goods__items-pagination {
+  & .pagination-container {
+    width: 100%;
+  }
+
+  & .pagination {
+    margin: 0 auto;
+    margin-top: 24px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+
+    & .page-item {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+
+      & .page-link {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: var(--black-2);
+      }
+
+      &:first-child .page-link,
+      &:last-child .page-link {
+        position: relative;
+        color: #ffffff;
+        &::before {
+          content: "";
+          display: block;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: url("./../assets/img/icons/chevron-right-light.svg") center center/cover
+            no-repeat;
+        }
+      }
+
+      &:first-child .page-link {
+        transform: rotate(-180deg);
+      }
+    }
+
+    & .active {
+      border: 1px solid var(--green);
+
+      & .page-link {
+        color: var(--green);
+      }
+    }
+  }
+}
