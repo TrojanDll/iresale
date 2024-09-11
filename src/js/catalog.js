@@ -269,6 +269,10 @@ appliedFilters.forEach((filter) => {
 
 let paginationElementsCount = 10;
 
+if (window.innerWidth <= 420) {
+  paginationElementsCount = 7;
+}
+
 var pagination = new Pagination({
   container: document.querySelector("#pagination"),
   pageClickCallback: function (pageNumber) {},

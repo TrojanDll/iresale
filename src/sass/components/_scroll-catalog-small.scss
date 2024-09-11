@@ -64,3 +64,13 @@
   height: 1px;
   background-color: var(--light);
 }
+
+@media (max-width: 576px) {
+  .scroll-catalog-small {
+    padding-top: 30px;
+  }
+
+  .scroll-catalog-small__divider {
+    margin-top: 24px;
+  }
+}

@@ -43,6 +43,9 @@
 }
 
 .product-item__discount {
+  position: absolute;
+  top: 16px;
+  left: 16px;
   height: 20px;
   width: fit-content;
   display: flex;
@@ -127,5 +130,24 @@
     width: 14px;
     height: 14px;
     // margin-right: 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-item {
+    width: 188px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-item__img-link {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-item {
+    width: 50%;
   }
 }
