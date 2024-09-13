@@ -44,6 +44,24 @@
   color: var(--black-2);
 }
 
+.page-info__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-info__header-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.page-info__header-button {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
 @media (max-width: 1240px) {
 }
 
